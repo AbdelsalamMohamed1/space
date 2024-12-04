@@ -1,4 +1,5 @@
 import 'package:assignment_2_2/explore_button.dart';
+import 'package:assignment_2_2/home_screen.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -32,7 +33,7 @@ class LoginScreen extends StatelessWidget {
               Expanded(child: Container()),
               ExploreButton(
                 text: 'Explore',
-                nextPage: '',
+                onClick: (){Navigator.pushReplacementNamed(context,HomeScreen.routeName);},
               )
             ],
           ),

@@ -2,9 +2,8 @@ import 'package:flutter/material.dart';
 
 class ExploreButton extends StatelessWidget {
   String text;
-  String nextPage;
-
-  ExploreButton({required this.text, required this.nextPage});
+  Function onClick;
+  ExploreButton({required this.text,required this.onClick});
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +11,7 @@ class ExploreButton extends StatelessWidget {
       margin: EdgeInsets.all(10),
       child: ElevatedButton(
           onPressed: () {
-            Navigator.pushReplacementNamed(context, nextPage);
+            onClick();
           },
           child: Row(
             children: [
